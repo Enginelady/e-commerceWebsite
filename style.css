@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+}
+
+h1 {
+    font-size: 80px;
+    line-height: 64px;
+    color: black;
+}
+
+h2 {
+    font-size: 46px;
+    line-height: 54px;
+    color: black;
+}
+
+h4 {
+    font-size: 24px;
+    color: black;
+}
+
+h5 {
+    font-size: 24px;
+    color: black;
+}
+
+h6 {
+    font-weight: 700;
+    font-size: 12px;
+} 
+
+p {
+    font-size: 25px;
+    color: black;
+    margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+    padding: 40px 80px;
+}
+
+.section-m1 {
+    margin: 40px 0;
+}
+
+button.normal {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: black;
+    background-color: wheat;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+}
+
+/* styling for the <section id="top">...</section> */
+#top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px;
+    background-color: rgb(225, 44, 44);
+    box-shadow: 0 5px 15px rgba(0, 0, 2, 0.6);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+
+}
+
+.welcome_pic {
+    font-size: 80px;
+    color: blanchedalmond;
+
+}
+
+#nav_bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*[list-style: none]-> this will remove the dots beside the navlinks */
+#nav_bar li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+
+/*[nav_bar li a]-> this will remove the lines under each navlink
+
+[transition: 0.3s ease; ]-> thi will make the colour change happening when the mouse hovers on each nav text to happen smoothly and timely i.e not to sharp but with ease  
+*/
+#nav_bar li a{
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 600;
+    color: blanchedalmond;
+    transition: 0.3s ease; 
+}
+
+/* [nav_bar li a:hover]-> this is to change the colour of each text when the mouse is hovered on it */
+
+#nav_bar li a:hover, 
+#nav_bar li a.active {
+    color: black;
+
+} 
+
+#nav_bar li a.active::after,
+#nav_bar li a:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+
+/*styling for the <section id="highlight">...</section>  */
+#highlight {
+    background-image: url("images_4project/highlight_image.jpg");
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 0 right 80%;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}   
+
+/* styling for the fonts in the highlight seection */
+#highlight h4 {
+    padding-bottom: 15px;
+    color: white;
+}
+
+#highlight h1 {
+    color: rgb(14, 1, 1);
+    color: white;
+}
+
+#highlight h2 {
+    color: white;
+
+}
+
+#highlight p {
+    color: white;
+}
+
+#highlight button{
+    font-size: 1rem;
+    border: 10px solid;
+    outline: none;
+    padding: 10px 12px;
+    border-radius: 4px;
+    background-color: rgb(225, 44, 44);
+    color: rgb(245, 216, 216);
+    cursor: pointer;   
+}
+
+#highlight button:hover {
+    color: black;
+} 
+
+/* styling for <section id="products" class="section-p1"> */
+#products {
+    text-align: center;
+}
+
+#products .pro_container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+
+#products .pro {
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid rgb(97, 92, 92);
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0.01, 0.3);
+    margin: 15px 0;
+    transition: 0.2s ease;
+    position: relative;
+}
+
+#products .pro:hover{
+    box-shadow: 20px 20px 30px rgba(0, 0, 0.01, 0.6);
+}
+
+#products .pro img{
+    width: 100%;
+    border-radius: 4px;
+
+}
+
+
+#products .pro .descripx{
+    text-align: start;
+    padding: 10px 0;
+}
+
+#products .pro .descripx span{
+    color: rgb(34, 30, 30);
+    font-size: 20px;
+}
+
+#products .pro .descripx h5{
+    padding-top: 7px;
+    color: black;
+    font-size: 25px;
+}
+
+#products .pro .descripx i{
+    font-size: 12px;
+    color: rgb(203, 156, 38);
+}
+
+#products .pro .descripx h4{
+    padding-top: 7px;
+    font-size: 25px;
+    font-weight: 700;
+    color:  rgb(162, 110, 110);
+}
+
+#products .pro .cart{
+    width: 50px;
+    height: 50px;
+    line-height: 50px; 
+    border-radius: 60px;
+    font-size: 30px;
+    background-color: rosybrown;
+    color: black;
+    font-weight: 2000;
+    border-color: 1px solid;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+
+}
+
+
+#newsletter{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: rgb(164, 69, 35);
+}
+
+#newsletter h4{
+    font-size: 25px;
+    font-weight: 800;
+    color: #fff;
+}
+
+#newsletter p{
+    font-size: 22px;
+    font-weight: 600;
+    color: #d4b2b2;
+}
+
+#newsletter p span{
+    font-size: 22px;
+    font-weight: 600;
+    color: #d9f365;
+}
+
+#newsletter input{
+    height: 3.125rem;
+    width: 100%;
+    text-align: start;
+    padding: 0 1.25rem;
+    font-size: 20px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid transparent;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+
+#newsletter button{
+    white-space: nowrap;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+ 
+#newsletter .form {
+    display: flex;
+    width: 100%;
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer .col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+footer h4{
+    font-size: 40px;
+    padding-bottom: 20px;
+}
+
+footer p{
+    font-size: 28px;
+    margin: 0 0 8px 0;
+}
+
+footer a{
+    font-size: 25px;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 10px;
+}
